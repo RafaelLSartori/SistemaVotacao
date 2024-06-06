@@ -16,12 +16,13 @@ public class Metodos {
     }
 
     public Votacao[] FCLASSIFICASECAO(Votacao[] votacao){
+        Votacao aux;
         for (int i = 0; i < 199; i++){
             for (int j = (i+1); j < 200; j++){
                 if (votacao[i].numeroSecao > votacao[j].numeroSecao){
-                    int aux = votacao[i].numeroSecao;
-                    votacao[i].numeroSecao = votacao[j].numeroSecao;
-                    votacao[j].numeroSecao = aux;
+                    aux = votacao[i];
+                    votacao[i] = votacao[j];
+                    votacao[j] = aux;
                 }
             }
         }
