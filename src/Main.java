@@ -16,7 +16,7 @@ public class Main {
         int opc4 = 0;
 
         while (opc != 9){
-            opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar voto \n 2 - Cassificar os registros \n 3 - Gravar dados \n 4 - Mostrar indicadores \n 9 - FIM"  ));
+            opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar voto \n 2 - Cassificar os registros \n 3 - Gravar dados \n 4 - Mostrar indicadores \n 5 - Ler dados salvos \n 9 - FIM"  ));
             switch (opc){
                 case 1: votacao = m.FCADASTRAVOTACAO(votacao);
                     break;
@@ -40,6 +40,7 @@ public class Main {
                         default: JOptionPane.showMessageDialog(null,"INVÁLIDO");
                     }
                 }
+                case 5: m.FLERVOTACAO();
                     break;
                 case 9: JOptionPane.showMessageDialog(null,"FIM");
                     break;

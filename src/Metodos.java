@@ -47,6 +47,22 @@ public class Metodos {
         return votacao;
     }
 
+    public void FLERVOTACAO() throws IOException {
+        String fileName = "Votação2021.txt";
+        BufferedReader ler = new BufferedReader(new FileReader(fileName));
+
+        Votacao votacao[] = new Votacao[200];
+
+        for (int i = 0; i < 200; i++){
+            votacao[i] = new Votacao();
+        }
+
+        for (int i = 0; i < 200; i++){
+            votacao[i].numeroSecao = Integer.parseInt(ler.readLine());
+            votacao[i].numeroCandidato = Integer.parseInt(ler.readLine());
+        }
+    }
+
     public void PQTDELEITORESPORSECAO(Votacao[] votacao){
         for (int i = 0; i < 200; i++){
             qtdEleitores[votacao[i].numeroSecao]++;
